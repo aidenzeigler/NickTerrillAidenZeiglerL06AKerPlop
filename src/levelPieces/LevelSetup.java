@@ -19,7 +19,13 @@ public class LevelSetup {
         playerStartLoc = GameEngine.BOARD_SIZE / 2;
 
         if (levelNum == 1) {
-            //addPiece(new gamePiece(), 1);
+            playerStartLoc = 1;
+            addPiece(new Rock(), 3);
+            addPiece(new Guard(8), 8);
+            addPiece(new Lawnmower(15), 15);
+        }
+        if (levelNum == 2) {
+            
         }
 
     }
