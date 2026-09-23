@@ -15,8 +15,6 @@ public class Guard extends GamePiece implements Moveable {
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         int distance = Math.abs(getLocation() - playerLocation);
 
-        System.out.println(distance);
-
         if (distance == 0) {
             return InteractionResult.KILL;
         }
