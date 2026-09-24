@@ -23,6 +23,7 @@ public class LevelSetup {
             addPiece(new Rock(), 3);
             addPiece(new Guard(8), 8);
             addPiece(new Lawnmower(15), 15);
+            addPiece(new Wizard(7), 7);
         }
         if (levelNum == 2) {
             
