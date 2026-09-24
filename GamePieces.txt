@@ -1,0 +1,24 @@
+Aiden Zeigler, Nick Terrill
+LO6A KerPlop Game
+
+Implements Drawable (No interaction, doesn't move):
+    - Rock
+
+Extends GamePiece, Implements Moveable:
+    - Guard
+        - Will move in the player's direction every other move.
+        - Will do interaction type KILL once the guard is in the same spot as the player.
+    - Lawnmower
+        - Will choose to move left, stay in the same spot, or move right randomly.
+        - Will do interaction type HIT once the Lawnmower is in the same spot as the player.
+
+Extends GamePiece:
+    - Wizard
+        - Will do interaction type KILL once the player is EXACTLY 3 spots away from the player, 
+        unless there is a game piece in between.
+    - TODO
+        - TODO
+    - TODO
+        - TODO
+    - TODO (Should be a prize / next level of some sort)
+        - TODO
