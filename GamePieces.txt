@@ -2,23 +2,24 @@ Aiden Zeigler, Nick Terrill
 LO6A KerPlop Game
 
 Implements Drawable (No interaction, doesn't move):
-    - Rock
+    - Rock (R)
 
 Extends GamePiece, Implements Moveable:
-    - Guard
+    - Guard (G)
         - Will move in the player's direction every other move.
         - Will do interaction type KILL once the guard is in the same spot as the player.
-    - Lawnmower
+    - Lawnmower (L)
         - Will choose to move left, stay in the same spot, or move right randomly.
         - Will do interaction type HIT once the Lawnmower is in the same spot as the player.
 
 Extends GamePiece:
-    - Wizard
+    - Wizard (W)
         - Will do interaction type KILL once the player is EXACTLY 3 spots away from the player, 
         unless there is a game piece in between.
-    - TODO
-        - TODO
-    - TODO
-        - TODO
-    - TODO (Should be a prize / next level of some sort)
-        - TODO
+    - Banana Peel (B)
+        - Will do interaction type HIT when the player steps on the same square as the banana peel, otherwise it 
+        will do nothing.
+    - Treasure (T)
+        - When the player stands on this space, they get a point.
+    - Elevator (E)
+        - When the player lands on this space, they are advanced to the next level.

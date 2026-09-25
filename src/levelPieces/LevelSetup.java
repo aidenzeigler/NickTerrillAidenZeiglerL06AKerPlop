@@ -21,11 +21,23 @@ public class LevelSetup {
         if (levelNum == 1) {
             playerStartLoc = 1;
             addPiece(new Rock(), 3);
-            addPiece(new Guard(8), 8);
+            addPiece(new Guard(6), 6);
             addPiece(new Lawnmower(15), 15);
             addPiece(new Wizard(7), 7);
+            addPiece(new Elevator(20), 20);
+            addPiece(new Treasure(10),10);
+            addPiece(new Treasure(17),17);
         }
         if (levelNum == 2) {
+        	playerStartLoc = 19;
+        	addPiece(new Lawnmower(18),18);
+        	addPiece(new BananaPeel(17),17);
+        	addPiece(new BananaPeel(12),12);
+        	addPiece(new Guard(20),20);
+        	addPiece(new Wizard(10),10);
+        	addPiece(new Treasure(15),15);
+        	addPiece(new Treasure(3),3);
+        	addPiece(new Rock(), 7);
             
         }
 
