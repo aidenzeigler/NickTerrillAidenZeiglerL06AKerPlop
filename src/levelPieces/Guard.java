@@ -4,6 +4,17 @@ import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
+/**
+* Guard Class
+*
+* @author Nick Terrill
+* @author Aiden Zeigler
+*
+* Purpose: Creates the Guard GamePiece, that will move 
+* in the player's direction every other turn, 
+* and give interaction type KILL when the player is on the same spot.
+*/
+
 public class Guard extends GamePiece implements Moveable {
     private boolean canMove = false;
 
