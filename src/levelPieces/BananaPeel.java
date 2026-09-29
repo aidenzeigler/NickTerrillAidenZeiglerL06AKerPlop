@@ -3,6 +3,16 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
+/**
+* BananaPeel Class
+*
+* @author Nick Terrill
+* @author Aiden Zeigler
+*
+* Purpose: Creates the BananaPeel GamePiece, that has 
+* interaction type HIT when the player lands on the same spot.
+*/
+
 public class BananaPeel extends GamePiece{
 
 	public BananaPeel(int location) {

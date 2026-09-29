@@ -6,6 +6,16 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
 
+/**
+* LevelSetup Class
+*
+* @author Nick Terrill
+* @author Aiden Zeigler
+*
+* Purpose: Creates the LevelSetup class, that will setup the levels
+* and its respective GameBoard with GamePieces.
+*/
+
 public class LevelSetup {
     private Drawable[] board;
     private ArrayList<Moveable> movingPieces;
@@ -16,7 +26,7 @@ public class LevelSetup {
         board = new Drawable[GameEngine.BOARD_SIZE];
         movingPieces = new ArrayList<>();
         interactingPieces = new ArrayList<>();
-        playerStartLoc = GameEngine.BOARD_SIZE / 2;
+        playerStartLoc = GameEngine.BOARD_SIZE / 2; // In case player start location isn't given
 
         if (levelNum == 1) {
             playerStartLoc = 1;

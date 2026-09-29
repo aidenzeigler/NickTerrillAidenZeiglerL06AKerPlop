@@ -6,6 +6,17 @@ import gameEngine.Moveable;
 
 import java.util.Random;
 
+/**
+* Lawnmower Class
+*
+* @author Nick Terrill
+* @author Aiden Zeigler
+*
+* Purpose: Creates the Lawnmower GamePiece, that will move
+* randomly (either left, no move, or right), and will return
+* interaction type HIT if player lands in the same spot.
+*/
+
 public class Lawnmower extends GamePiece implements Moveable {
 
     Random random = new Random();
