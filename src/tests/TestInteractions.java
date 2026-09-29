@@ -7,6 +7,11 @@ import levelPieces.*;
 
 
 public class TestInteractions {
+	
+		/*
+		 * tests if BananaPeel properly returns a HIT if the player is standing on it, 
+		 * otherwise returns NONE
+		 */
 	 	@Test
 		public void testBananaPeel() {
 			Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
@@ -20,6 +25,11 @@ public class TestInteractions {
 			for (int i=11; i<GameEngine.BOARD_SIZE; i++)	
 				assertEquals(InteractionResult.NONE, bananaPeel.interact(gameBoard, i));
 		}
+	 	
+	 	/*
+		 * tests if Elevator properly returns a ADVANCE if the player is standing on it, 
+		 * otherwise returns NONE
+		 */
 	 	
 	 	@Test
 	 	public void testElevator() {
@@ -35,6 +45,11 @@ public class TestInteractions {
 				assertEquals(InteractionResult.NONE, elevator.interact(gameBoard, i));
 		}
 	 	
+	 	/*
+		 * tests if BananaPeel properly returns a GET_POINT if the player is standing on it, 
+		 * otherwise returns NONE
+		 */
+	 	
 	 	@Test
 	 	public void testTreasure() {
 			Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE]; 
@@ -48,6 +63,12 @@ public class TestInteractions {
 			for (int i=11; i<GameEngine.BOARD_SIZE; i++)	
 				assertEquals(InteractionResult.NONE, treasure.interact(gameBoard, i));
 		}
+	 	
+	 	/*
+		 * tests if BananaPeel properly returns a KILL if the player is standing on exactly 3 
+		 * spaces away, otherwise returns NONE, then checks if a piece standing in the way will
+		 * properly stop the KILL from being returned
+		 */
 	 	
 	 	@Test
 	 	public void testWizard() {
@@ -64,8 +85,14 @@ public class TestInteractions {
 				assertEquals(InteractionResult.NONE, wizard.interact(gameBoard, i));
 			for (int i=14; i<GameEngine.BOARD_SIZE; i++)	
 				assertEquals(InteractionResult.NONE, wizard.interact(gameBoard, i));
+			
+			BananaPeel blocker = new BananaPeel(11);
+			assertEquals(InteractionResult.NONE, wizard.interact(gameBoard, 13));
 		}
-	 	
+	 	/*
+		 * tests if Lawnmower properly returns a HIT if the player is standing on it, 
+		 * otherwise returns NONE
+		 */
 	 	@Test
 	 	public void testLawnmower() {
 			Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE]; 
@@ -80,11 +107,17 @@ public class TestInteractions {
 				assertEquals(InteractionResult.NONE, lawnMower.interact(gameBoard, i));
 		}
 	 	
+	 	/*
+		 * tests if Guard properly returns a KILL if the player is standing on it, 
+		 * otherwise returns NONE
+		 */
+	 
+	 	
 	 	@Test
 	 	public void testGuard() {
 			Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE]; 
 			Guard guard = new Guard(10);
-			gameBoard[10] = guard;
+			gameBoard[10] = guard; 
 			// Hit points if player on same space
 			assertEquals(InteractionResult.KILL, guard.interact(gameBoard, 10));
 			// These loops ensure no interaction if not on same space
